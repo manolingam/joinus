@@ -41,9 +41,9 @@ const Feedback = () => {
         isLoading={context.submitting}
         loadingText='Submitting'
         id='chakra-button'
-        // onClick={() => {
-        //   context.submitFeedback(feedbackOne, feedbackTwo, rating);
-        // }}
+        onClick={() => {
+          console.log(feedbackOne, feedbackTwo, rating);
+        }}
       >
         Submit
       </Button>

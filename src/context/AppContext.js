@@ -2,10 +2,6 @@ import React, { Component, createContext } from 'react';
 
 export const AppContext = createContext();
 
-const axios = require('axios');
-
-let raidID = '';
-
 class AppContextProvider extends Component {
   state = {
     // UX state
