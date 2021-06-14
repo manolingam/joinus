@@ -30,31 +30,23 @@ const Confirmation = () => {
           The Fires Have Been Lit!
         </motion.h2>
 
-        {context.hash && (
-          <motion.p
-            id='hash-text'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
-          >
-            <a
-              href={`https://etherscan.io/tx/${context.hash}`}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              {context.hash}
-            </a>
-            <i class='fas fa-link'></i>
-          </motion.p>
-        )}
+        <motion.p
+          id='hash-text'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.5 }}
+        >
+          You are cohort number #12
+          {/* <i class='fas fa-link'></i> */}
+        </motion.p>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
         >
-          Your request is on its way. Expect a response from the Guild within 48
-          hours. While we work, your feedback can help us level up.
+          Your submission has went through. See you in season 2. While we work,
+          your feedback can help us level up.
         </motion.p>
 
         <motion.div

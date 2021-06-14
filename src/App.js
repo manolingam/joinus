@@ -5,10 +5,12 @@ import { motion } from 'framer-motion';
 import { AppContext } from './context/AppContext';
 
 import HeadsUp from './stages/HeadsUp';
-import PersonalInfo from './stages/PersonalInfo';
-import ProjectInfo from './stages/ProjectInfo';
-import RequiredServices from './stages/RequiredServices';
-import AdditionalInfo from './stages/AdditionalInfo';
+import QuickIntro from './stages/QuickIntro';
+import SocialPresence from './stages/SocialPresence';
+import SkillSet from './stages/SkillSet';
+import TellUsMore from './stages/TellUsMore';
+import Crypto from './stages/Crypto';
+import Readiness from './stages/Readiness';
 import Confirmation from './stages/Confirmation';
 import Feedback from './stages/Feedback';
 
@@ -73,14 +75,16 @@ const App = () => {
                 <Route path='/' exact>
                   <>
                     {context.stage === 1 && <HeadsUp />}
-                    {context.stage === 2 && <PersonalInfo />}
-                    {context.stage === 3 && <ProjectInfo />}
-                    {context.stage === 4 && <RequiredServices />}
-                    {context.stage === 5 && <AdditionalInfo />}
-                    {context.stage === 6 && <Confirmation />}
-                    {context.stage === 7 && <Feedback />}
+                    {context.stage === 2 && <QuickIntro />}
+                    {context.stage === 3 && <SocialPresence />}
+                    {context.stage === 4 && <SkillSet />}
+                    {context.stage === 5 && <TellUsMore />}
+                    {context.stage === 6 && <Crypto />}
+                    {context.stage === 7 && <Readiness />}
+                    {context.stage === 8 && <Confirmation />}
+                    {context.stage === 9 && <Feedback />}
 
-                    {context.stage !== 1 && context.stage !== 6 && (
+                    {context.stage !== 1 && context.stage !== 8 && (
                       <button
                         id='prev-stage-button'
                         onClick={() => context.updateStage('previous')}
